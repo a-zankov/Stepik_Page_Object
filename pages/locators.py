@@ -6,4 +6,9 @@ class MainPageLocators():
 
 
 class LoginPageLocators():
+    LOGIN_USERNAME = (By.CSS_SELECTOR, "#id_login-username")
+    LOGIN_PASSWORD = (By.CSS_SELECTOR, "#id_login-password")
+    REGISTRATION_EMAIL = (By.CSS_SELECTOR, "#id_registration-email")
+    REGISTRATION_PASSWORD = (By.CSS_SELECTOR, "#id_registration-password1")
+    REGISTRATION_CONFIRM_PASSWORD = (By.CSS_SELECTOR, "#id_registration-password2")
 
