@@ -22,3 +22,15 @@ class LoginPage(BasePage):
         assert self.is_element_present(*LoginPageLocators.REGISTRATION_EMAIL)
         assert self.is_element_present(*LoginPageLocators.REGISTRATION_PASSWORD)
         assert self.is_element_present(*LoginPageLocators.REGISTRATION_CONFIRM_PASSWORD)
+
+    def register_new_user(self, email, password):
+        email_address = self.browser.find_element(*LoginPageLocators.REGISTRATION_EMAIL)
+        email_address.send_keys(email)
+        password_field = self.browser.find_element(*LoginPageLocators.REGISTRATION_PASSWORD)
+        password_field.send_keys(password)
+        confirm_password = self.browser.find_element(*LoginPageLocators.REGISTRATION_CONFIRM_PASSWORD)
+        confirm_password.send_keys(password)
+        register_button = self.browser.find_element(*LoginPageLocators.REGISTER_BUTTON)
+        register_button.click()
+
+
